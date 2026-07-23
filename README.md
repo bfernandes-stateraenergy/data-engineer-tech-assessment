@@ -1,20 +1,32 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Statera Data Engineer Interview
+
+Welcome to the Data Engineer interview repo! The fact that you've got this far suggests you're doing well!
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+You'll need Docker installed. Installing it is beyond the scope of this README,
+but if you're having trouble please reach out to your Statera contact.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Once docker is installed, you can start the database by doing:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```bash
+docker compose up
+```
+
+If all has gone according to plan you should now see a low-fi db admin page at `localhost:8080`.
+
+To access the database, choose "PostgreSQL" as the system, "db" as the server and:
+
+- username: `postgres`
+- password: `type-whatever-you-want-here`
+- database: `postgres`
+
+
+You can also connect to the database using your favourite client (we sometimes
+use DBeaver) with the following credentials:
+
+- host: `localhost`
+- port: 15432
+- user: `postgres`
+- password: leave this blank
+- database: `postgres`
