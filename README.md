@@ -1,4 +1,4 @@
-# Statera Data Engineer Interview
+# Statera Energy Data Engineer Technical Assessment
 
 Welcome to the Data Engineer interview repo! The fact that you've got this far suggests you're doing well!
 
