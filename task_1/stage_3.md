@@ -7,16 +7,22 @@ To ensure reliability calculations always use the capacity that was valid when e
 ## Data model
 To enact the above, replace `site_capacities` with a historical `site_capacities_history` table.
 
-site_capacities_history
-(
-    site_id      INT            NOT NULL,
-    capacity_mw  NUMERIC(18,2)  NOT NULL,
-    date_from    TIMESTAMP      NOT NULL,
-    date_to      TIMESTAMP      NULL,
+```sql
+CREATE TABLE site_capacities_history (
+    site_id     INT           NOT NULL,
+    capacity_mw NUMERIC(18,2) NOT NULL,
+    date_from   TIMESTAMP     NOT NULL,
+    date_to     TIMESTAMP     NULL,
 
     PRIMARY KEY (site_id, date_from),
-    CHECK (date_to IS NULL OR date_to > date_from)
-)
+
+    CHECK (
+        date_to IS NULL
+        OR date_to > date_from
+    )
+);
+```
+
 - `date_from` records when a capacity becomes effective 
 - `date_to` records when a capacity ceases to be effective.
 - Current capacity record has `date_to = NULL`.
