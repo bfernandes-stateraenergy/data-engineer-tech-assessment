@@ -18,4 +18,4 @@ Approximately 10 minutes.
 ## Starter Files
 
 - `task_2_assets/data/telemetry_raw.csv`
-- `task_2_assets/notebook/task_2_starter.ipynb`
+- `task_2_assets/notebook/task_2.ipynb`
