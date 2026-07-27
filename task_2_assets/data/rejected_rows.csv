@@ -1,0 +1,5 @@
+timestamp,active_power,setpoint,site_id,rejection_reason
+2026-07-01 01:30:00,19000.0,,1,"Setpoint present, Setpoint non-negative"
+2026-07-01 02:30:00,19350.0,18950.0,1,Not duplicate
+2026-07-01 03:00:00,,19100.0,1,"Active power present, Active power non-negative"
+,20000.0,19400.0,1,Valid timestamp
